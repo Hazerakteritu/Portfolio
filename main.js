@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
-
+//........smooth scroll............
 
   const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
   
@@ -98,6 +98,30 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  });
+
+    // .......Active Link on Scroll.........
+  const sections = document.querySelectorAll('section[id]');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const scrollY = window.pageYOffset;
+    
+    sections.forEach(section => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 100;
+      
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
         link.classList.add('active');
       }
     });
