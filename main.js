@@ -1,4 +1,7 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
+  
   
   //.....About Read More ....
   const aboutMore = document.getElementById('about-more');
@@ -76,7 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
-  // ===== Smooth Scrolling =====
+
+
   const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
   
   navLinks.forEach(link => {
@@ -92,34 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
           block: 'start'
         });
         
-        // Update active link
+
         navLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
       }
     });
   });
 
-//   // ===== Active Link on Scroll =====
-//   const sections = document.querySelectorAll('section[id]');
-  
-//   window.addEventListener('scroll', () => {
-//     let current = '';
-//     const scrollY = window.pageYOffset;
-    
-//     sections.forEach(section => {
-//       const sectionHeight = section.offsetHeight;
-//       const sectionTop = section.offsetTop - 100;
-      
-//       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//         current = section.getAttribute('id');
-//       }
-//     });
-    
-//     navLinks.forEach(link => {
-//       link.classList.remove('active');
-//       if (link.getAttribute('href') === `#${current}`) {
-//         link.classList.add('active');
-//       }
-//     });
-//   });
 });

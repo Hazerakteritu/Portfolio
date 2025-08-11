@@ -52,7 +52,8 @@ body {
   -webkit-background-clip: border-box;
 }
 
-/* Typing Animation */
+
+
 .typing-line {
   font-size: 22px;
   font-weight: 700;
@@ -192,6 +193,9 @@ body {
   line-height: 1.6;
 }
 
+
+
+/* .........................about more  ..................................... */
 .about-more-text {
   display: none;
 }
@@ -331,7 +335,7 @@ body {
   border-radius: 10px;
   transition: 0.3s, transform 0.3s;
   position: relative;
-  align-self: start; /* Individual box alignment */
+  align-self: start; 
 }
 
 .project-box h2 {
@@ -439,7 +443,6 @@ body {
 
 .projects-list div:hover {
   background: #3a3a3a;
-  transform: translateY(-10px);
 }
 
 /* ...............Achievements................... */
